@@ -76,9 +76,14 @@ arrowRight.addEventListener('click', function() {
     updateSlide(currentIndex); /* Mettre à jour l'affichage de la diapositive */
 });
 
+/* ex : currentIndex=2 slides.length=4 alors cela fera (2+1)%4=3 par conséquent currentIndex=3 */
+/* bouble fin de slider : currentIndex=3 slides.length=4 alors cela fera (3+1)%4=0 par conséquent currentIndex=0 */
+
 /* flèche gauche */
 
 arrowLeft.addEventListener('click', function() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length; /* Passer à la diapositive précédente (et revenir à la fin si on atteint le début) */
     updateSlide(currentIndex); /* Mettre à jour l'affichage de la diapositive */
 });
+
+/* boucle debut de slider : currentIndex=0 slides.length=4 alors cela fera (0-1+4)%4 -> 3%4=3 par conséquent currentIndex=3 */
