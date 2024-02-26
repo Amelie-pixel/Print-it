@@ -21,20 +21,20 @@ const slides = [
 
 const arrowLeft = document.querySelector('.arrow_left');
 arrowLeft.addEventListener('click', function() {
-    console.log('Image left cliquée');
+    console.log('Arrow left clicked');
 });
 
 /* clic image flèche droite + affichage dans la console  */
 
 const arrowRight = document.querySelector('.arrow_right');
 arrowRight.addEventListener('click', function() {
-    console.log('Image right cliquée');
+    console.log('Arrow right clicked');
 });
 
-/* affichage des dots sur le slider en fonction du nombre d'image */
+/* affichage des dots sur le slider en fonction du nombre d'image + dot select de base à chaque rechargement de la page */
 
 const banner = document.getElementById('banner');
-const dotsContainer = banner.querySelector('.dots');
+const dotsContainer = document.querySelector('.dots');
 
 slides.forEach((slide, index) => {
     const dot = document.createElement('span');
